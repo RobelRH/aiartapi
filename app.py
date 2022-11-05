@@ -18,11 +18,6 @@ def home():
         model = replicate.models.get("stability-ai/stable-diffusion")
         output_url = model.predict(prompt=prompt)[0]
         return {"generated": output_url}
-<<<<<<< HEAD
-        # return "post api detected"
-=======
->>>>>>> 45d4f460a980bcb6e0ce8d1a170eef08fca6c50e
-
 
 if __name__ == '__main__':
     # app.run(host='0.0.0.0', port=5000, debug=True)
