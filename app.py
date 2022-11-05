@@ -12,14 +12,16 @@ def home():
     if request.method == 'GET':
         return "got an api okay"
     if request.method == 'POST':
-        # print("i got something")
         request_data = request.data
         request_data = json.loads(request_data.decode('utf-8'))
         prompt = request_data['prompt']
         model = replicate.models.get("stability-ai/stable-diffusion")
         output_url = model.predict(prompt=prompt)[0]
         return {"generated": output_url}
+<<<<<<< HEAD
         # return "post api detected"
+=======
+>>>>>>> 45d4f460a980bcb6e0ce8d1a170eef08fca6c50e
 
 
 if __name__ == '__main__':
