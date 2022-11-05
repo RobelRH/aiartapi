@@ -1,7 +1,6 @@
 from cProfile import run
 from operator import mod
 import replicate
-import webbrowser
 from flask import Flask, request
 import json
 
@@ -10,6 +9,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    if request.method == 'GET':
+        return "got an api"
     if request.method == 'POST':
         print("i got something")
         request_data = request.data
