@@ -14,7 +14,7 @@ def home():
     if request.method == 'POST':
         # print("i got something")
         request_data = request.data
-        return {"abc" : request_data}
+        return {"abc" : "request_data"}
         # request_data = json.loads(request_data.decode('utf-8'))
         # prompt = request_data['prompt']
         # model = replicate.models.get("stability-ai/stable-diffusion")
